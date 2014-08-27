@@ -17,9 +17,6 @@
         "doctrine/dbal": "~2.2"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.0"
-    },
-    "config": {
-        "bin-dir": "bin"
+        "mockery/mockery": "0.9"
     }
 }
