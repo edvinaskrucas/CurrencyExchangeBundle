@@ -1,0 +1,13 @@
+{
+    "name": "krucas/currencyexhangebundle",
+    "description": "CurrencyExchangeBundle for test task I had.",
+    "authors": [
+        {
+            "name": "Edvinas Kručas",
+            "email": "edv.krucas@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "2.5.*"
+    }
+}
