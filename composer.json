@@ -7,6 +7,11 @@
             "email": "edv.krucas@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Krucas\\CurrencyExchangeBundle": "src/"
+        }
+    },
     "require": {
         "symfony/symfony": "2.5.*"
     },
