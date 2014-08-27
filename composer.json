@@ -13,7 +13,8 @@
         }
     },
     "require": {
-        "symfony/symfony": "2.5.*"
+        "symfony/symfony": "2.5.*",
+        "doctrine/dbal": "~2.2"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0"
