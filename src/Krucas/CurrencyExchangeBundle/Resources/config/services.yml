@@ -1,0 +1,31 @@
+parameters:
+  krucas_currency_exchange.class.service.rate: Krucas\CurrencyExchangeBundle\Service\RateService
+  krucas_currency_exchange.class.service.manager: Krucas\CurrencyExchangeBundle\Service\RateManager
+  krucas_currency_exchange.class.storage.rate: Krucas\CurrencyExchangeBundle\Storage\DoctrineRateStorage
+  krucas_currency_exchange.storage.doctrine.table: "cache"
+  krucas_currency_exchange.refreshRate: 5
+  krucas_currency_exchange.providers:
+    - Krucas\CurrencyExchangeBundle\Provider\GoogleProvider
+    - Krucas\CurrencyExchangeBundle\Provider\YahooProvider
+    - Krucas\CurrencyExchangeBundle\Provider\SimpleProvider
+
+
+#services:
+#    krucas_currency_exchange.example:
+#        class: %krucas_currency_exchange.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+
+services:
+  krucas_currency_exchange.service.rate:
+    class: %krucas_currency_exchange.class.service.rate%
+    arguments: [%krucas_currency_exchange.providers%]
+  krucas_currency_exchange.storage.rate:
+    class: %krucas_currency_exchange.class.storage.rate%
+    arguments: [@doctrine.dbal.default_connection, %krucas_currency_exchange.storage.doctrine.table%]
+  krucas_currency_exchange.service.manager:
+    class: %krucas_currency_exchange.class.service.manager%
+    arguments:
+      - @krucas_currency_exchange.service.rate
+      - @krucas_currency_exchange.storage.rate
+      - { refreshRate: %krucas_currency_exchange.refreshRate% }
