@@ -31,3 +31,7 @@ new Krucas\CurrencyExchangeBundle\KrucasCurrencyExchangeBundle()
 
 * currency:rates - Return array of rates. Accepts two params: from-currency, to-currency
 * currency:rate:best - Return best rate. Accepts two params: from-currency, to-currency
+
+### Extra
+
+To use doctrine rate storage you should import ```sql/table.sql``` into your configured DB.
