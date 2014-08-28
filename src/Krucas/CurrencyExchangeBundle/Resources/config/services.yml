@@ -9,13 +9,6 @@ parameters:
     - Krucas\CurrencyExchangeBundle\Provider\YahooProvider
     - Krucas\CurrencyExchangeBundle\Provider\SimpleProvider
 
-
-#services:
-#    krucas_currency_exchange.example:
-#        class: %krucas_currency_exchange.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
-
-
 services:
   krucas_currency_exchange.service.rate:
     class: %krucas_currency_exchange.class.service.rate%
