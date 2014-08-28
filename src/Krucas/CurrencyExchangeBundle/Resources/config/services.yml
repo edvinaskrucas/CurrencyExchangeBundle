@@ -1,7 +1,7 @@
 parameters:
   krucas_currency_exchange.class.service.rate: Krucas\CurrencyExchangeBundle\Service\RateService
   krucas_currency_exchange.class.service.manager: Krucas\CurrencyExchangeBundle\Service\RateManager
-  krucas_currency_exchange.class.storage.rate: Krucas\CurrencyExchangeBundle\Storage\DoctrineRateStorage
+  krucas_currency_exchange.class.storage.rate: Krucas\CurrencyExchangeBundle\Storage\ArrayRateStorage
   krucas_currency_exchange.storage.doctrine.table: "cache"
   krucas_currency_exchange.refreshRate: 5
   krucas_currency_exchange.providers:
